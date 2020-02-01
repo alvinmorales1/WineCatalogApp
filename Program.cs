@@ -6,7 +6,8 @@ namespace WineCatalogApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var WineInformation = new WineInformation();
+            WineInformation.WineName = "Myfirstwine";
         }
     }
 }
