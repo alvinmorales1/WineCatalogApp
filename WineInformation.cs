@@ -14,18 +14,19 @@ namespace WineCatalogApp
     {
         private static int lastIDNumber = 0;
         #region Properties
-        public int WineIDNumber { get; private set; }
-        public string WineName { get; private set; }
-        public string WineryName { get; private set; }
-        public int Vintange { get; private set; }
-        public int WineScore { get; private set; }
-        public string WineVarietals { get; private set; }
-        public string WineRegion { get; private set; }
-        public decimal WinePrice { get; private set; }
-        public DateTime SampledDate { get; private set; }
+        public int WineIDNumber { get;private set; }
+        public string WineName { get;set; }
+        public string WineryName { get;set; }
+        public int Vintange { get;set; }
+        public int WineScore { get;set; }
+        public string WineVarietals { get;set; }
+        public string WineRegion { get;set; }
+        public double WinePrice { get;set; }
+        public String SampledDate { get;set; }
         public DateTime RecordedDate { get;private set; }
-        public string WineNotes { get; private set; }
-        public string WineComments { get; set; }
+        public string WineNotes { get;set; }
+        public string CommentsEmail { get;set; }
+        public string WineComments { get;set; }
         #endregion
 
         #region Methods
@@ -53,11 +54,11 @@ namespace WineCatalogApp
         {
             WineRegion = Region;
         }
-        public void AddWinePrice(decimal Price)
+        public void AddWinePrice(double Price)
         {
             WinePrice = Price;
         }
-        public void AddSampleDate(DateTime Sample)
+        public void AddSampleDate(string Sample)
         {
             SampledDate = Sample;
         }
