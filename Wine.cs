@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace WineCatalogApp
 {
     static class WineCatalog
     {
+        private static List<WineInformation> registeredWines = new List<WineInformation>();
         /// <summary>
         /// Creates a new wine in the list
         /// </summary>
@@ -35,7 +37,13 @@ namespace WineCatalogApp
 
             };
 
+            registeredWines.Add(newWine);
             return newWine;
+        }
+
+        public static IEnumerable<WineInformation>GetWineByName(string winename)
+        {
+            return registeredWines.Where(a => a.WineName == winename);
         }
     }
 }

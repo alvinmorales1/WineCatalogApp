@@ -6,6 +6,21 @@ using System.Text;
 
 namespace WineCatalogApp
 {
+
+    enum TypeOfGrapes
+    {
+        Cabernet,
+        Riesling,
+        SauvBlanc,
+        Chardonnay,
+        Pinot,
+        Tempranillo
+
+
+
+
+
+    }
 /// <summary>
 ///  Describes the properties for all the Wine listed in the page
 /// </summary>
