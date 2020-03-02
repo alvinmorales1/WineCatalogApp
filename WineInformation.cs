@@ -27,9 +27,9 @@ namespace WineCatalogApp
 
     class WineInformation
     {
-        private static int lastIDNumber = 0;
+       // private static int lastIDNumber = 0;
         #region Properties
-        public int WineIDNumber { get;private set; }
+        public int WineIDNumber { get; set; }
         public string WineName { get;set; }
         public string WineryName { get;set; }
         public int Vintange { get;set; }
@@ -38,7 +38,7 @@ namespace WineCatalogApp
         public string WineRegion { get;set; }
         public double WinePrice { get;set; }
         public String SampledDate { get;set; }
-        public DateTime RecordedDate { get;private set; }
+        public DateTime RecordedDate { get; set; }
         public string WineNotes { get;set; }
         public string CommentsEmail { get;set; }
         public string WineComments { get;set; }
@@ -88,7 +88,7 @@ namespace WineCatalogApp
 
         public WineInformation()
         {
-            WineIDNumber = ++lastIDNumber;
+          //  WineIDNumber = ++lastIDNumber;
             RecordedDate = DateTime.UtcNow;
 
         }

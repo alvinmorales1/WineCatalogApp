@@ -7,7 +7,8 @@ namespace WineCatalogApp
 {
     static class WineCatalog
     {
-        private static List<WineInformation> registeredWines = new List<WineInformation>();
+        private static Winecontext db = new Winecontext();
+       // private static List<WineInformation> registeredWines = new List<WineInformation>();
         /// <summary>
         /// Creates a new wine in the list
         /// </summary>
@@ -37,13 +38,26 @@ namespace WineCatalogApp
 
             };
 
-            registeredWines.Add(newWine);
+            db.Wines.Add(newWine);
+            db.SaveChanges();
             return newWine;
         }
 
         public static IEnumerable<WineInformation>GetWineByName(string winename)
         {
-            return registeredWines.Where(a => a.WineName == winename);
+            return db.Wines.Where(a => a.WineName == winename);
+        }
+
+        public static void UpdateOriginalNotes(string winename,string notes)
+        {
+            var winebottle = db.Wines.SingleOrDefault(a => a.WineName == winename);
+            if(winebottle == null)
+            {
+                //throw exception
+                return;
+            }
+
+          //  winebottle.
         }
     }
 }

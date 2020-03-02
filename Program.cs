@@ -6,8 +6,8 @@ namespace WineCatalogApp
     {
         static void Main(string[] args)
         {
-            var myNewWine = WineCatalog.AddWineToList("Troublemaker", "Adam West Winery",2017, "Red Blend", "Paso Robles California", 17.99, "1 / 20 / 2020", "plum, leather, long finish");
-            Console.WriteLine($"WineID:{myNewWine.WineIDNumber},WineName:{myNewWine.WineName},WineryName:{myNewWine.WineryName},Vintange:{myNewWine.Vintange},Varietal:{myNewWine.WineVarietals},Price:{myNewWine.WinePrice},Sampled Date:{myNewWine.SampledDate},Notes:{myNewWine.WineNotes}");
+           // var myNewWine = WineCatalog.AddWineToList("Troublemaker", "Adam West Winery",2017, "Red Blend", "Paso Robles California", 17.99, "1 / 20 / 2020", "plum, leather, long finish");
+          //  Console.WriteLine($"WineID:{myNewWine.WineIDNumber},WineName:{myNewWine.WineName},WineryName:{myNewWine.WineryName},Vintange:{myNewWine.Vintange},Varietal:{myNewWine.WineVarietals},Price:{myNewWine.WinePrice},Sampled Date:{myNewWine.SampledDate},Notes:{myNewWine.WineNotes}");
 
             Console.WriteLine("**********************************************************************");
             Console.WriteLine("Welcome to the Wine entry App");
@@ -56,6 +56,8 @@ namespace WineCatalogApp
                         
                         break;
                     case "2":
+                        
+
                     case "3":
                         NewMethod();
                         break;
